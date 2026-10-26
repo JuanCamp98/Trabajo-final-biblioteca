@@ -1,0 +1,37 @@
+export const MESSAGES = {
+  SERVER_RUNNING: (port) => `Servidor de biblioteca escuchando en el puerto ${port}`,
+  SERVER_START_ERROR: 'No se pudo iniciar la aplicación',
+  ENV_JWT_SECRET: (min) => `Configurá JWT_SECRET en el archivo .env con al menos ${min} caracteres.`,
+  ENV_ADMIN_PASSWORD: 'Configurá ADMIN_PASSWORD en el archivo .env para crear el administrador inicial.',
+  HEALTH_OK: 'API de biblioteca funcionando.',
+
+  LOGIN_OK: (username) => `Inicio de sesión correcto: ${username}`,
+  LOGIN_FAILED: (username) => `Intento de inicio de sesión fallido: ${username}`,
+  INVALID_CREDENTIALS: 'Usuario o contraseña incorrectos.',
+  UNAUTHORIZED: 'Sesión inválida o vencida. Iniciá sesión nuevamente.',
+  TOKEN_INVALID: 'Token inválido o vencido',
+  ADMIN_CREATED: (username) => `Administrador inicial creado: ${username}`,
+
+  SERVER_ERROR: 'Ocurrió un error interno.',
+  ROUTE_NOT_FOUND: (method, url) => `Ruta no encontrada: ${method} ${url}`,
+  RECORD_NOT_FOUND: 'Registro no encontrado.',
+  INVALID_JSON: 'El cuerpo de la petición no es un JSON válido.',
+  INVALID_ID: 'El identificador no es válido.',
+  DUPLICATE_RECORD: 'Ya existe un registro con ese valor único.',
+  RECORD_IN_USE: 'No se puede eliminar: el registro está relacionado con otros datos.',
+  VALIDATION_ERROR: 'Revisá los datos enviados.',
+
+  FIELD_REQUIRED: (label) => `El campo '${label}' es obligatorio.`,
+  FIELD_INTEGER: (label) => `El campo '${label}' debe ser un número entero.`,
+  FIELD_MIN: (label, min) => `El campo '${label}' no puede ser menor que ${min}.`,
+  FIELD_MAX: (label, max) => `El campo '${label}' no puede ser mayor que ${max}.`,
+  FIELD_TOO_LONG: (label, max) => `El campo '${label}' no puede superar los ${max} caracteres.`,
+  RELATION_NOT_FOUND: (label) => `El valor de '${label}' no existe.`,
+  INVALID_LOG_LEVEL: 'El nivel de log indicado no es válido.',
+  INVALID_LOG_TYPE: 'El tipo de log indicado no es válido.',
+
+  RECORD_CREATED: (label, name) => `Creación de ${label}: "${name}"`,
+  RECORD_UPDATED: (label, name) => `Actualización de ${label}: "${name}"`,
+  RECORD_DELETED_LOG: (label, name) => `Eliminación de ${label}: "${name}"`,
+  RECORD_DELETED: 'Registro eliminado correctamente.',
+};
